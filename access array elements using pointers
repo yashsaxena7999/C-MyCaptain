@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;                                         
+int main(){
+    int num;
+    cout<<"Enter the number of elements you want in the array : ";
+    cin>>num;
+int arr[num];
+int * ptr ;
+ptr=arr; 
+cout<<"Enter the Elements in the array :-"<<endl;
+int i;
+for(i=0;i<num;i++){
+            cout<<"Element ["<<i<<"] = ";
+            cin>>*(ptr+i); 
+}
+cout<<"The Elements in the array are :-"<<endl;
+for(i=0;i<num;i++){
+
+            cout<<"arr["<<i<<"] = "<<*(ptr+i)<<endl;           
+}
+cout<<"Enter index of the element you want to access in the array : ";
+int index;
+cin>>index;
+cout<<"The element at index "<<index<<" : "<<*(ptr+(index));
+return 0;
+}

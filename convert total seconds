@@ -1,0 +1,56 @@
+#include<iostream>
+using namespace std;
+class timee{
+int hours;
+int mins;
+int secs;
+public:
+void readTime(void);
+void showtime(void){
+if(hours>10&&mins>10&&secs>10){
+    cout<<hours<<":"<<mins<<":"<<secs<<endl;
+}
+else{
+if(hours<10){
+    cout<<"0"<<hours<<":";
+}
+else{
+    cout<<hours<<":";
+}
+if(mins<10){
+    cout<<"0"<<mins<<":";
+}
+else{
+    cout<<mins<<":";
+}
+if(secs<10){
+    cout<<"0"<<secs;
+}
+else{
+    cout<<secs;
+}
+}
+cout<<endl;
+}
+void secondtime(void){
+    int a=hours*60*60;
+    int b=mins*60;
+    int total = a+b+secs;
+    cout<<"Total time in seconds is : "<<total<<endl;
+}
+};
+void timee :: readTime ( void ){
+    cout<<"Enter HOURS : ";
+    cin>>hours;
+    cout<<"Enter MINUTES : ";
+    cin>>mins;
+    cout<<"Enter SECONDS : ";
+    cin>>secs;
+}
+int main(){
+timee t1;
+t1.readTime();
+t1.showtime();
+t1.secondtime();
+    return 0;
+}
